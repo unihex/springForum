@@ -49,7 +49,7 @@ public class Post extends BaseDomainObject {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.postId, this.threadId, this.userId, this.content, this.createdDate, this.modifiedDate);
+		return Objects.hash(this.postId);
 	}
 	
 	@Override
@@ -61,12 +61,7 @@ public class Post extends BaseDomainObject {
 		
 		Post otherPost = (Post) obj;
 		
-		result = Objects.equals(this.postId, otherPost.getPostId()) &&
-				Objects.equals(this.threadId, otherPost.getThreadId()) &&
-				Objects.equals(this.userId, otherPost.getUserId()) &&
-				Objects.equals(this.content, otherPost.getContent()) &&
-				Objects.equals(this.createdDate, otherPost.getCreatedDate()) &&
-				Objects.equals(this.modifiedDate, otherPost.getModifiedDate());
+		result = Objects.equals(this.postId, otherPost.getPostId());
 		
 		return result;
 	}
